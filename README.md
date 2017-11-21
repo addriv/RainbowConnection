@@ -113,6 +113,7 @@ A user is a person with a first and last name, a favorite color, and any number 
 
 ## Packages
 * `ember-infinity` - infinite pagination  
+* `faker` - generate random names
 
 - - - - 
 
