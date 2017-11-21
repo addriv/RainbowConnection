@@ -28,8 +28,8 @@ A user is a person with a first and last name, a favorite color, and any number 
 **Day 1:**
 - [X] Laravel project initial setup
 - [ ] Back end
-  - [ ] Models
-    - [ ] PostgreSQL schema
+  - [X] Models
+    - [X] PostgreSQL migrations/schema
     - [ ] User model
     - [ ] UserConnection model
   - [ ] Seed database
@@ -110,6 +110,9 @@ A user is a person with a first and last name, a favorite color, and any number 
 * `/` - intial index page
 * `/:user_id` - user show page
 * `/testdata` - test endpoint for populating db
+
+## Packages
+* `ember-infinity` - infinite pagination  
 
 - - - - 
 

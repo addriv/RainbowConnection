@@ -117,4 +117,16 @@ return [
 
     ],
 
+    'pgsql' => [
+        'driver'   => 'pgsql',
+        'host'     => env('DB_HOST', 'localhost'),
+        'port'     => '5432',
+        'database' => env('DB_DATABASE', 'rainbow_connection'), // This seems to be ignored
+        'username' => env('DB_USERNAME', 'postgres'),
+        'password' => env('DB_PASSWORD', ''),
+        'charset'  => 'utf8',
+        'prefix'   => '',
+        'schema'   => 'public'
+    ],
+
 ];
