@@ -1,6 +1,83 @@
-# Description
+# Overview
 Build a web site to find and manage connections between a large number of users.
 A user is a person with a first and last name, a favorite color, and any number of connections to other users.  Connections are always mutual (ie bi-directional).
+
+## Features
+
+- [ ] Initial index page  
+  - [ ] Display list of users with 3 columns: full name, favorite color, comma separated list of connected users  
+  - [ ] Color favorite color text with relevant color  
+  - [ ] Infinite pagination, display only 25 users and load 25 more upon scrolling down  
+- [ ] User show page  
+  - [ ] Title bar with user's full name and favorite color  
+  - [ ] Display list of connected users with 3 columns: full name, favorite color, remove button  
+  - [ ] Remove button functionality  
+  - [ ] Dropdown on favorite color to update to new  
+- [ ] Test endpoint  
+  - [ ] Takes a userCount, clears database, re-populates with appropriate count of randomly generated names  
+  - [ ] Randomly generate favorite color  
+  - [ ] Randomly generate between 0-50 connections  
+
+## Timeline
+
+**Day 0:**
+[ ] Ember.js tutorial
+[ ] Laravel tutorial
+
+**Day 1:**
+[ ] 
+[ ]
+[ ]
+
+**Day 2:**
+
+
+## Schema
+
+### `users`
+| column name         | data type | details                   |
+|:--------------------|:---------:|:--------------------------|
+| `id`                | integer   | not null, primary key     |
+| `first_name`        | string    | not null                  |
+| `last_name`         | string    | not null                  |
+| `favorite_color`    | string    | not null                  |
+| `created_at`        | datetime  | not null                  |
+| `updated_at`        | datetime  | not null                  |
+
++ index on `[:first_name, :last_name], unique: false?` 
+
+### `user_connections`
+| column name         | data type | details                        |
+|:--------------------|:---------:|:-------------------------------|
+| `id`                | integer   | not null, primary key          |
+| `user_id`           | integer   | not null, indexed, foreign key |
+| `connected_user_id` | integer   | not null, indexed, foreign key |
+| `created_at`        | datetime  | not null                       |
+| `updated_at`        | datetime  | not null                       |
+
++ `user_id` references `users`
++ `connected_user_id` references `users`
++ index on `[:user_id, :connected_user_id], unique: true`
+
+## Routes
+
+### API Endpoints
+
+`users`
+* `GET /api/users` - initial index page
+* `GET /api/users/:user_id` - user show page
+* `POST /api/users/testdata` - test endpoint for populating db
+
+`user_connections`
+* `DELETE /api/user_connections/:user_connection_id` - delete connection
+
+### Front End Routes
+
+* `/` - intial index page
+* `/:user_id` - user show page
+* `/testdata` - test endpoint for populating db
+
+- - - - 
 
 ## Requirements
 1. Site should only use ajax beyond initial index page load
@@ -29,3 +106,4 @@ A user is a person with a first and last name, a favorite color, and any number 
 * This endpoint should clear the database, and populate it with a set of [userCount] users with randomly generated, human first and last names.
 * Each user should have between 0 and 50 connections to other users.  These connections should be randomly generated.
 * Each user should have a randomly generated favorite color.
+
