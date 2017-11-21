@@ -18,19 +18,52 @@ A user is a person with a first and last name, a favorite color, and any number 
   - [ ] Randomly generate favorite color  
   - [ ] Randomly generate between 0-50 connections  
 
-## Timeline
+## Implementation Timeline
 
 **Day 0:**
-[ ] Ember.js tutorial
-[ ] Laravel tutorial
+- [X] Ember.js tutorial
+- [X] Laravel tutorial
+- [X] Implementation plan
 
 **Day 1:**
-[ ] 
-[ ]
-[ ]
+- [X] Laravel project initial setup
+- [ ] Back end
+  - [ ] Models
+    - [ ] PostgreSQL schema
+    - [ ] User model
+    - [ ] UserConnection model
+  - [ ] Seed database
+  - [ ] Laravel endpoints
+    - [ ] `users`
+      - [ ] `GET /api/users`
+      - [ ] `GET /api/users/:user_id`
+  - [ ] Laravel controllers
+    - [ ] `users_controller`
+- [ ] Front end
+  - [ ] Initial index page
+    - [ ] Ember routes - `/`
+    - [ ] Styling
+  - [ ] User show page
+    - [ ] Ember routes - `/:user_id`
+    - [ ] Styling
 
 **Day 2:**
-
+- [ ] Back end
+  - [ ] Laravel endpoints
+    - [ ] `users`
+      - [ ] `POST /api/users/testdata`
+      - [ ] `PATCH /api/users/:user_id`
+    - [ ] `user_connections`
+     - [ ] `DELETE /api/user_connections/:user_connection_id`
+  - [ ] Laravel controllers
+    - [ ] `user_connections`
+- [ ] Front end
+  - [ ] User show page
+    - [ ] Update favorite color functionality
+    - [ ] Remove connection functionality
+  - [ ] Testdata page
+    - [ ] Ember routes - `/testdata`
+    - [ ] Styling
 
 ## Schema
 
@@ -44,7 +77,7 @@ A user is a person with a first and last name, a favorite color, and any number 
 | `created_at`        | datetime  | not null                  |
 | `updated_at`        | datetime  | not null                  |
 
-+ index on `[:first_name, :last_name], unique: false?` 
++ index on `[:first_name, :last_name], unique: false` 
 
 ### `user_connections`
 | column name         | data type | details                        |
@@ -67,6 +100,7 @@ A user is a person with a first and last name, a favorite color, and any number 
 * `GET /api/users` - initial index page
 * `GET /api/users/:user_id` - user show page
 * `POST /api/users/testdata` - test endpoint for populating db
+* `PATCH /api/users/:user_id` - update favorite color
 
 `user_connections`
 * `DELETE /api/user_connections/:user_connection_id` - delete connection
