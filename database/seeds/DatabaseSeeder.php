@@ -12,34 +12,10 @@ class DatabaseSeeder extends Seeder
 	 */
 	public function run()
 	{
-		// use the factory to create a Faker\Generator instance
-		$faker = Faker::create();
+		DB::statement('TRUNCATE users, user_connections RESTART IDENTITY;');
 
-		// Favorite color choices
-		$colors = [
-			// Primary
-			'red',
-			'yellow',
-			'blue',
-			// Secondary
-			'green',
-			'orange',
-			'violet',
-			// Tertiary
-			'red-orange',
-			'red-violet',
-			'yellow-orange', 
-			'yellow-green', 
-			'blue-green', 
-			'blue-violet', 
-		];
-
-		for ($i=0; $i < 50; $i++){
-			DB::table('users')->insert([
-				'first_name' => $faker->firstName,
-				'last_name' => $faker->lastName,
-				'favorite_color' => $colors[rand(0, 11)]
-			]);
-		}
+		// Call seeders
+		$this->call('UsersTableSeeder');
+		$this->call('UserConnectionsTableSeeder');
 	}
 }

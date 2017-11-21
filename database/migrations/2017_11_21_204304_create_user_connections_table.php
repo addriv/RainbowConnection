@@ -18,6 +18,9 @@ class CreateUserConnectionsTable extends Migration
             $table->integer('user_id');
             $table->integer('connected_user_id');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('connected_user_id')->references('id')->on('users');
+            $table->unique(['user_id', 'connected_user_id']);
         });
     }
 

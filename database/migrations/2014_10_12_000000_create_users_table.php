@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('last_name');
             $table->string('favorite_color');
             $table->timestamps();
+            $table->index(['first_name', 'last_name']);
         });
     }
 
