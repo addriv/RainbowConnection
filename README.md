@@ -101,8 +101,8 @@ A user is a person with a first and last name, a favorite color, and any number 
 `users`
 * `GET /api/users` - initial index page
 * `GET /api/users/:user_id` - user show page
-* `POST /api/users/testdata` - test endpoint for populating db
 * `PATCH /api/users/:user_id` - update favorite color
+* `POST /api/users/testdata` - test endpoint for populating db
 
 `user_connections`
 * `DELETE /api/user_connections/:user_connection_id` - delete connection

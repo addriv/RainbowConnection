@@ -18,11 +18,17 @@ use App\User;
 //     return $request->user();
 // });
 
-Route::get('/users', function(){
-  return User::find(1)->connections()->get();
-});
+Route::resource('users', 'UsersController', ['only' => ['index', 'show', 'update']]);
 
-Route::get('/test', function(){
-  return User::find(1)->connectedUsers()->get();
-});
+// Route::get('/users/{id?}', function($id = null){
+//   // return $id;
+//   if ($id == null){
+//     return User::all();
+//   } else {
+//     return User::find($id);
+//   }
+// });
 
+// Route::get('/test', function(){
+//   return User::find(1)->connectedUsers()->get();
+// });
