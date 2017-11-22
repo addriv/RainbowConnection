@@ -1,5 +1,6 @@
 <?php
 
+use App\User;
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker; // Faker for generating random names
 
@@ -39,11 +40,11 @@ class UsersTableSeeder extends Seeder
 
 		// Generate user records
 		for ($i=0; $i < $numUsers; $i++){
-			DB::table('users')->insert([
-				'first_name' => $faker->firstName,
-				'last_name' => $faker->lastName,
-				'favorite_color' => $colors[rand(0, 11)]
-			]);
+      $user = new User;
+      $user->first_name = $faker->firstName;
+      $user->last_name = $faker->lastName;
+      $user->favorite_color = $colors[rand(0,11)];
+      $user->save();
 		}
 	}
 }

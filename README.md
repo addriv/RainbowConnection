@@ -33,8 +33,8 @@ A user is a person with a first and last name, a favorite color, and any number 
     - [X] UserConnections
   - [X] Seed database
   - [X] Models
-    - [ ] User
-    - [ ] UserConnection
+    - [X] User
+    - [X] UserConnection
   - [ ] Laravel endpoints
     - [ ] `users`
       - [ ] `GET /api/users`

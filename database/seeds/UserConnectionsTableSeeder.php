@@ -1,5 +1,6 @@
 <?php
 
+use App\UserConnection;
 use Illuminate\Database\Seeder;
 
 class UserConnectionsTableSeeder extends Seeder
@@ -62,15 +63,16 @@ class UserConnectionsTableSeeder extends Seeder
 					$connectedId = rand(1, $numUsers);
 				}
 
-				// Insert connection records
-				DB::table('user_connections')->insert([
-					'user_id' => $i,
-					'connected_user_id' => $connectedId
-				]);
-				DB::table('user_connections')->insert([
-					'user_id' => $connectedId,
-					'connected_user_id' => $i
-				]);
+        // Insert connection records
+        $userConnection = new UserConnection;
+        $userConnection->user_id = $i;
+        $userConnection->connected_user_id = $connectedId;
+        $userConnection->save();
+
+        $inverseConnection = new UserConnection;
+        $inverseConnection->user_id = $connectedId;
+        $inverseConnection->connected_user_id = $i;
+        $inverseConnection->save();
 			}
 		}
 	}
