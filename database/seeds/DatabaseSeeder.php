@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder
 	 */
 	public function run()
 	{
+		// Truncate and restart sequence of tables
 		DB::statement('TRUNCATE users, user_connections RESTART IDENTITY;');
 
 		// Call seeders

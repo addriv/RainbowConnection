@@ -28,11 +28,13 @@ A user is a person with a first and last name, a favorite color, and any number 
 **Day 1:**
 - [X] Laravel project initial setup
 - [ ] Back end
+  - [X] PostgreSQL migrations/schema
+    - [X] Users
+    - [X] UserConnections
+  - [X] Seed database
   - [X] Models
-    - [X] PostgreSQL migrations/schema
-    - [ ] User model
-    - [ ] UserConnection model
-  - [ ] Seed database
+    - [ ] User
+    - [ ] UserConnection
   - [ ] Laravel endpoints
     - [ ] `users`
       - [ ] `GET /api/users`
