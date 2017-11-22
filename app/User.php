@@ -9,6 +9,18 @@ class User extends Authenticatable
 {
   public function connections()
   {
-    return $this->belongsToMany('App\UserConnection', 'user_connections', 'user_id', 'connected_user_id');
+    return $this->hasMany('App\UserConnection', 'user_id', 'id');
+  }
+
+  public function connectedUsers()
+  {
+    return $this->hasManyThrough(
+      'App\User', 
+      'App\UserConnection', 
+      'connected_user_id',
+      'id',
+      'id',
+      'user_id'
+    );
   }
 }

@@ -19,6 +19,10 @@ use App\User;
 // });
 
 Route::get('/users', function(){
-  return User::all();
+  return User::find(1)->connections()->get();
+});
+
+Route::get('/test', function(){
+  return User::find(1)->connectedUsers()->get();
 });
 
