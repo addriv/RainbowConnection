@@ -35,12 +35,12 @@ A user is a person with a first and last name, a favorite color, and any number 
   - [X] Models
     - [X] User
     - [X] UserConnection
-  - [ ] Laravel endpoints
-    - [ ] `users`
-      - [ ] `GET /api/users`
-      - [ ] `GET /api/users/:user_id`
-  - [ ] Laravel controllers
-    - [ ] `users_controller`
+  - [X] Laravel endpoints
+    - [X] `users`
+      - [X] `GET /api/users`
+      - [X] `GET /api/users/:user_id`
+  - [X] Laravel controllers
+    - [X] `users_controller`
 - [ ] Front end
   - [ ] Initial index page
     - [ ] Ember routes - `/`
