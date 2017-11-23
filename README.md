@@ -2,6 +2,10 @@
 Build a web site to find and manage connections between a large number of users.
 A user is a person with a first and last name, a favorite color, and any number of connections to other users.  Connections are always mutual (ie bi-directional).
 
+<p align="center">
+  <img src="https://github.com/addriv/RainbowConnection/blob/master/preview.gif" width="600">
+</p>
+
 ## Features
 
 - [ ] Initial index page  
