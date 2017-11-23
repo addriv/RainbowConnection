@@ -7,12 +7,14 @@ A user is a person with a first and last name, a favorite color, and any number 
 - [ ] Initial index page  
   - [X] Display list of users with 3 columns: full name, favorite color, comma separated list of connected users  
   - [X] Color favorite color text with relevant color  
-  - [ ] Infinite pagination, display only 25 users and load 25 more upon scrolling down  
+  - [ ] Infinite pagination, display only 25 users and load 25 more upon scrolling down 
+      * Unfinished, api response data paginated but not handled in front end.
 - [ ] User show page  
   - [X] Title bar with user's full name and favorite color  
   - [X] Display list of connected users with 3 columns: full name, favorite color, remove button  
   - [X] Color favorite color text with relevant color    
   - [ ] Infinite pagination, display only 25 connected users and load 25 more upon scrolling down    
+      * Unfinished, api response data paginated but not handled in front end.
   - [ ] Remove button functionality  
   - [ ] Dropdown on favorite color to update to new  
 - [X] Test endpoint  
