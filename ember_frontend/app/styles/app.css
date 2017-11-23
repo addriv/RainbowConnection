@@ -1,0 +1,183 @@
+html, body, h1 {
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+}
+.ember-view {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+nav {
+  height: 100px;
+  background-color: blue;
+  background-image: url("https://static.pexels.com/photos/226589/pexels-photo-226589.jpeg");
+  background-size: 100vw;
+  display: flex;
+  align-items: center;
+}
+.nav-title {
+  color: white;
+  font-size: 50px;
+  padding: 10px;
+  margin: 10px;
+}
+.index-content, .user-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 800px;
+}
+.user-list-header {
+  border: 1px solid black;
+}
+.user-item, .user-list-header {
+  width: 100%;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+.user-list-header {
+  height: 40px;
+  width: 85%;
+  margin-top: 10px;
+}
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 85%;
+  height: calc(100% - 140px);
+  position: absolute;
+  border: 1px solid black;
+  overflow-y: auto;
+  top: 150px;
+}
+.header-name, .list-name {
+  padding: 15px;
+  width: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-right: solid black 1px;
+}
+.header-fav-color, .list-fav-color {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: solid black 1px;
+  width: 100px;
+}
+.header-connections {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-connections, .list-connections {
+  padding: 15px;
+  text-align: center;
+  width: calc(100% - 290px);
+}
+.title {
+  width: 85%;
+  height: 60px;
+  border: 1px solid black;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  min-width: 600px;
+}
+.title-name {
+  font-size: 24px;
+  margin: 10px;
+}
+.connected-list {
+  position: absolute;
+  min-width: 690.043px;
+  overflow-y: auto;
+  top: 272px;
+  height: calc(100% - 270px);
+}
+.connected-list, .connected-header {
+  padding: 0;
+  margin: 0;
+  width: 85%;
+  border: solid 1px black;
+}
+.connected-header, .connected-label {
+  height: 30px;
+}
+.connected-item, .connected-header {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+.connected-item {
+  width: 100%;
+}
+.connected-name, 
+  .connected-color, 
+  .connected-remove, 
+  .cn-header-name, 
+  .cn-header-color, 
+  .cn-header-rmove {
+  width: 33%;
+  }
+  .yellow {
+    text-transform: capitalize;
+    color: yellow;
+  }
+  .red {
+    text-transform: capitalize;
+    color: red;
+  }
+  .blue {
+    text-transform: capitalize;
+    color: blue;
+  }
+  .orange {
+    text-transform: capitalize;
+    color: orange
+  }
+  .green {
+    text-transform: capitalize;
+    color: green;
+  }
+  .violet {
+    text-transform: capitalize;
+    color: violet;
+  }
+  .red-orange {
+    text-transform: capitalize;
+    color: orangered;
+  }
+  .red-violet {
+    text-transform: capitalize;
+    color: #CC3299
+  }
+  .yellow-orange {
+    text-transform: capitalize;
+    color: #FFEF02;
+  }
+  .yellow-green {
+    text-transform: capitalize;
+    color: yellowgreen;
+  }
+  .blue-green {
+    text-transform: capitalize;
+    color: #00DDDD;
+  }
+  .blue-violet {
+    text-transform: capitalize;
+    color: blueviolet;
+  }
+  .title-color {
+    display: flex;
+    text-transform: capitalize;
+  }
+  .title-color div{
+    padding: 5px;
+  }

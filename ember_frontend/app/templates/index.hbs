@@ -1,0 +1,29 @@
+<div class="index-content">
+  <div class="user-list-header">
+    <div class="header-name">Name</div>
+    <div class="header-fav-color">Favorite Color</div>
+    <div class="header-connections">Connections</div>
+  </div>
+  <ul class="user-list">
+    {{#each model.data as |userData|}}
+      <li class="user-item">
+        <div class="list-name">
+          {{userData.attributes.first_name }} {{concat ' ' userData.attributes.last_name}}
+        </div>
+        <div class="list-fav-color">
+          <div class={{userData.attributes.favorite_color}}>
+             {{userData.attributes.favorite_color}}
+          </div>
+        </div>
+        <div class="list-connections">
+          {{#each userData.attributes.connected_users as |connectedUser|}}
+            {{#link-to 'user' connectedUser.id}}
+              {{connectedUser.first_name}} {{connectedUser.last_name}}
+            {{/link-to}}
+            ,
+          {{/each}}
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+</div>

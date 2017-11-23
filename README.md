@@ -5,18 +5,20 @@ A user is a person with a first and last name, a favorite color, and any number 
 ## Features
 
 - [ ] Initial index page  
-  - [ ] Display list of users with 3 columns: full name, favorite color, comma separated list of connected users  
-  - [ ] Color favorite color text with relevant color  
+  - [X] Display list of users with 3 columns: full name, favorite color, comma separated list of connected users  
+  - [X] Color favorite color text with relevant color  
   - [ ] Infinite pagination, display only 25 users and load 25 more upon scrolling down  
 - [ ] User show page  
-  - [ ] Title bar with user's full name and favorite color  
-  - [ ] Display list of connected users with 3 columns: full name, favorite color, remove button  
+  - [X] Title bar with user's full name and favorite color  
+  - [X] Display list of connected users with 3 columns: full name, favorite color, remove button  
+  - [X] Color favorite color text with relevant color    
+  - [ ] Infinite pagination, display only 25 connected users and load 25 more upon scrolling down    
   - [ ] Remove button functionality  
   - [ ] Dropdown on favorite color to update to new  
-- [ ] Test endpoint  
-  - [ ] Takes a userCount, clears database, re-populates with appropriate count of randomly generated names  
-  - [ ] Randomly generate favorite color  
-  - [ ] Randomly generate between 0-50 connections  
+- [X] Test endpoint  
+  - [X] Takes a userCount, clears database, re-populates with appropriate count of randomly generated names  
+  - [X] Randomly generate favorite color  
+  - [X] Randomly generate between 0-50 connections  
 
 ## Implementation Timeline
 
@@ -41,31 +43,26 @@ A user is a person with a first and last name, a favorite color, and any number 
       - [X] `GET /api/users/:user_id`
   - [X] Laravel controllers
     - [X] `users_controller`
-- [ ] Front end
-  - [ ] Initial index page
-    - [ ] Ember routes - `/`
-    - [ ] Styling
-  - [ ] User show page
-    - [ ] Ember routes - `/:user_id`
-    - [ ] Styling
+- [X] Front end
+  - [X] Initial index page
+    - [X] Ember routes - `/`
+    - [X] Styling
+  - [X] User show page
+    - [X] Ember routes - `/:user_id`
+    - [X] Styling
 
 **Day 2:**
 - [ ] Back end
-  - [ ] Laravel endpoints
+  - [X] Laravel endpoints
     - [ ] `users`
-      - [ ] `POST /api/users/testdata`
+      - [X] `POST /api/users/testdata`
       - [ ] `PATCH /api/users/:user_id`
     - [ ] `user_connections`
      - [ ] `DELETE /api/user_connections/:user_connection_id`
-  - [ ] Laravel controllers
-    - [ ] `user_connections`
 - [ ] Front end
   - [ ] User show page
     - [ ] Update favorite color functionality
     - [ ] Remove connection functionality
-  - [ ] Testdata page
-    - [ ] Ember routes - `/testdata`
-    - [ ] Styling
 
 ## Schema
 
@@ -111,7 +108,6 @@ A user is a person with a first and last name, a favorite color, and any number 
 
 * `/` - intial index page
 * `/:user_id` - user show page
-* `/testdata` - test endpoint for populating db
 
 ## Packages
 * `ember-infinity` - infinite pagination  

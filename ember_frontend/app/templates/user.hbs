@@ -1,0 +1,31 @@
+<div class="user-content">
+  <div class="title">
+    <div class="title-name">
+      {{model.first_name}} {{model.last_name}}
+    </div>
+    <div class="title-color">
+      <div class="title-color-label">Favorite Color:</div>
+      <div class={{model.favorite_color}}>{{model.favorite_color}}</div>
+    </div>
+  </div>
+
+  <div class="connected-label">Connections</div>
+  <div class="connected-header">
+    <div class="cn-header-name">Name</div>
+    <div class="cn-header-color">Favorite Color</div>
+    <div class="cn-header-remove">Remove</div>
+  </div>
+  <ul class="connected-list">
+    {{#each model.connected_users as |connectedUser|}}
+      <li class="connected-item">
+        <div class="connected-name">
+          {{connectedUser.first_name}} {{connectedUser.last_name}}
+        </div>
+        <div class="connected-color">
+          <div class={{connectedUser.favorite_color}}>{{connectedUser.favorite_color}}</div>
+        </div>
+        <div class="connected-remove"><button>Remove</button></div>
+      </li>
+    {{/each}}
+  </ul>
+</div>
